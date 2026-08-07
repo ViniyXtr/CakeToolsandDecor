@@ -1,0 +1,290 @@
+.brands-hero{
+
+
+    min-height:85vh;
+    
+    padding:15vh 6vw 5vh;
+    
+    display:grid;
+    
+    grid-template-columns:1fr 1fr;
+    
+    align-items:center;
+    
+    gap:5vw;
+    
+    
+    }
+    
+    
+    
+    .brands-hero h1{
+    
+    
+    font-size:4vw;
+    
+    line-height:1.1;
+    
+    margin-top:2vh;
+    
+    
+    }
+    
+    
+    
+    .brands-hero p{
+    
+    
+    margin-top:2vh;
+    
+    font-size:1.2vw;
+    
+    line-height:1.8;
+    
+    color:#666;
+    
+    
+    }
+    
+    
+    
+    .brands-image{
+    
+    
+    display:flex;
+    
+    justify-content:center;
+    
+    
+    }
+    
+    
+    
+    .brands-image img{
+    
+    
+    width:30vw;
+    
+    animation:float 4s infinite ease-in-out;
+    
+    
+    }
+    
+    
+    
+    
+    .brands-section{
+    
+    
+    padding:5vh 6vw;
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    
+    .brands-section h2{
+    
+    
+    font-size:3vw;
+    
+    color:var(--accent);
+    
+    
+    }
+    
+    
+    
+    
+    .section-description{
+    
+    
+    margin:2vh auto;
+    
+    color:#777;
+    
+    max-width:700px;
+    
+    
+    }
+    
+    
+    
+    .brand-grid{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(320px, 420px));
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    
+    
+    
+    .brand-card{
+    
+    
+    background:white;
+    
+    padding:2vw;
+    
+    border-radius:30px;
+    
+    box-shadow:var(--shadow);
+    
+    transition:.4s;
+    
+    
+    }
+    
+    
+    
+    .brand-card:hover{
+    
+    
+    transform:translateY(-10px);
+    
+    
+    }
+    
+    
+    
+    .brand-card img{
+    
+    
+    height:120px;
+    
+    width:100%;
+    
+    object-fit:contain;
+    
+    margin-bottom:3vh;
+    
+    
+    }
+    
+    
+    
+    .brand-card h3{
+    
+    
+    color:var(--accent);
+    
+    font-size:1.5rem;
+    
+    
+    }
+    
+    
+    
+    .brand-card p{
+    
+    
+    color:#666;
+    
+    line-height:1.7;
+    
+    margin:2vh 0;
+    
+    
+    }
+    
+    
+    
+    .brand-card a{
+    
+    
+    display:inline-block;
+    
+    padding:1vh 2vw;
+    
+    background:var(--primary);
+    
+    color:white;
+    
+    border-radius:50px;
+    
+    
+    }
+    
+    
+    
+    
+    .brand-message{
+    
+    
+    margin:8vh 6vw;
+    
+    padding:5vh;
+    
+    background:#ffe8ee;
+    
+    border-radius:30px;
+    
+    text-align:center;
+    
+    
+    }
+    
+    
+    
+    .brand-message h2{
+    
+    
+    color:var(--accent);
+    
+    margin-bottom:3vh;
+    
+    
+    }
+    
+    
+    
+    .brand-message p{
+    
+    
+    font-size:1.1rem;
+    
+    margin:1vh;
+    
+    
+    }
+    
+    
+    
+    
+    @media(max-width:900px){
+    
+    
+    .brands-hero{
+    
+    
+    grid-template-columns:1fr;
+    
+    
+    }
+    
+    
+    
+    .brands-hero h1{
+    
+    
+    font-size:10vw;
+    
+    
+    }
+    
+    
+    
+    .brands-hero p{
+    
+    
+    font-size:4vw;
+    
+    
+    }
+    
+    
+    }
