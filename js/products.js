@@ -431,7 +431,7 @@ ${product.description}
 
 <a 
 class="order-btn"
-href="https://wa.me/${phone}?text=Hello SweetBake, I am interested in ${product.name}"
+href="https://wa.me/${phone}?text=Hello Cake Tools and Decor, I am interested in ${product.name}"
 target="_blank">
 
 Order Now
