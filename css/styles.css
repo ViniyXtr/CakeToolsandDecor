@@ -1204,6 +1204,463 @@ grid-template-columns:1fr 1fr;
         
         }
 
+
+/* =========================================================
+   RESPONSIVE OVERRIDES
+   Keep existing desktop styles unchanged
+========================================================= */
+
+
+/* =========================================================
+   SMALL COMPUTERS / LAPTOPS
+   901px - 1366px
+========================================================= */
+
+@media (min-width: 901px) and (max-width: 1366px) {
+
+    nav {
+        padding: 0 4vw;
+    }
+
+    .nav-links {
+        gap: 1.5vw;
+    }
+
+    .logo h2 {
+        font-size: 1.6vw;
+    }
+
+    .logo span {
+        font-size: 0.8vw;
+    }
+
+    /* Keep hero side-by-side */
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        padding: 12vh 5vw;
+        gap: 3vw;
+    }
+
+    .hero-left h1 {
+        font-size: clamp(2.5rem, 4vw, 4.5rem);
+    }
+
+    .hero-left p {
+        font-size: 1.2vw;
+    }
+
+    .hero-right img {
+        width: 35vw;
+    }
+
+    .hero-circle {
+        width: 38vw;
+        height: 38vw;
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+   601px - 900px
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    nav {
+        height: 75px;
+        padding: 0 4vw;
+    }
+
+    .logo img {
+        width: 55px;
+    }
+
+    .logo h2 {
+        font-size: 22px;
+    }
+
+    .logo span {
+        font-size: 12px;
+    }
+
+
+    /* -------------------------
+       HERO
+    ------------------------- */
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 120px;
+        padding-bottom: 80px;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        align-items: center;
+
+        gap: 3vw;
+
+        text-align: left;
+    }
+
+
+    .hero-left {
+        align-items: flex-start;
+    }
+
+
+    .hero-left h1 {
+        font-size: clamp(2.3rem, 5vw, 3.5rem);
+        line-height: 1.1;
+    }
+
+
+    .hero-left p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+
+    .hero-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .hero-buttons a {
+        text-align: center;
+        white-space: nowrap;
+    }
+
+
+    /* -------------------------
+       HERO IMAGE
+    ------------------------- */
+
+    .hero-right {
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+
+    .hero-right img {
+        width: 42vw;
+        max-width: 400px;
+    }
+
+
+    .hero-circle {
+        width: 45vw;
+        height: 45vw;
+
+        max-width: 430px;
+        max-height: 430px;
+    }
+
+
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+
+    .footer {
+        padding: 50px 5vw 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE DEVICES
+   600px AND BELOW
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -------------------------
+       NAVIGATION
+    ------------------------- */
+
+    nav {
+        height: 75px;
+        padding: 0 5vw;
+    }
+
+
+    .logo {
+        gap: 10px;
+    }
+
+
+    .logo img {
+        width: 50px;
+        min-width: 50px;
+    }
+
+
+    .logo h2 {
+        font-size: 20px;
+        line-height: 1.1;
+    }
+
+
+    .logo span {
+        font-size: 11px;
+    }
+
+
+    /* -------------------------
+       HERO
+       Image ABOVE text
+    ------------------------- */
+
+    .hero {
+
+        min-height: auto;
+
+        padding: 105px 6vw 60px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 30px;
+
+        text-align: center;
+    }
+
+
+    /* Image comes first */
+    .hero-right {
+        order: 1;
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        margin: 0;
+    }
+
+
+    /* Text comes second */
+    .hero-left {
+        order: 2;
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 20px;
+    }
+
+
+    /* -------------------------
+       REMOVE PINK CIRCLE
+    ------------------------- */
+
+    .hero-circle {
+        display: none;
+    }
+
+
+    /* -------------------------
+       HERO IMAGE
+    ------------------------- */
+
+    .hero-right img {
+        width: 78vw;
+
+        max-width: 360px;
+
+        height: auto;
+
+        margin: 0 auto;
+    }
+
+
+    /* -------------------------
+       HERO HEADING
+    ------------------------- */
+
+    .hero-left h1 {
+        width: 100%;
+
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+
+        line-height: 1.1;
+
+        text-align: center;
+    }
+
+
+    /* -------------------------
+       HERO PARAGRAPH
+    ------------------------- */
+
+    .hero-left p {
+        width: 100%;
+
+        max-width: 500px;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+
+    /* -------------------------
+       HERO BUTTONS
+    ------------------------- */
+
+    .hero-buttons {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+
+    .hero-buttons a {
+
+        width: min(100%, 300px);
+
+        padding: 14px 25px;
+
+        text-align: center;
+
+        border-radius: 50px;
+    }
+
+
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+
+    .footer {
+        margin-top: 50px;
+
+        padding: 45px 6vw 20px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .footer-column {
+        text-align: center;
+    }
+
+
+    .footer-column h3 {
+        margin-bottom: 15px;
+    }
+
+
+    .footer-column a {
+        margin-bottom: 10px;
+    }
+
+
+    .footer-bottom {
+        margin-top: 30px;
+
+        font-size: 0.85rem;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   390px AND BELOW
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+
+    .logo span {
+        display: none;
+    }
+
+
+    .hero {
+        padding-left: 5vw;
+        padding-right: 5vw;
+
+        padding-top: 100px;
+
+        gap: 25px;
+    }
+
+
+    .hero-right img {
+        width: 82vw;
+
+        max-width: 320px;
+    }
+
+
+    .hero-left h1 {
+        font-size: 11vw;
+    }
+
+
+    .hero-left p {
+        font-size: 15px;
+
+        line-height: 1.65;
+    }
+
+
+    .hero-buttons a {
+        width: 100%;
+
+        max-width: 280px;
+
+        padding: 13px 20px;
+    }
+}
+
     
     
     
