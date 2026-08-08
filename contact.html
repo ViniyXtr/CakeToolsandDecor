@@ -334,47 +334,75 @@
         <!-- Contact Form -->
 
 
-        <div class="contact-form">
-
+       <div class="contact-form">
 
             <h2>
                 Send A Message
             </h2>
 
+            <form id="contact-form" novalidate>
+
+                <!-- Name -->
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name">
+
+                    <small class="form-error" id="name-error"></small>
+
+                </div>
 
 
-            <form>
+                <!-- Phone -->
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" autocomplete="tel">
+
+                    <small class="form-error" id="phone-error"></small>
+
+                </div>
 
 
+                <!-- Product -->
+                <div class="form-group">
 
-                <input type="text" placeholder="Your Name">
+                    <label for="product">
+                        Product You Need
+                    </label>
+
+                    <input type="text" id="product" name="product" placeholder="Enter the product you need">
+
+                    <small class="form-error" id="product-error"></small>
+
+                </div>
 
 
+                <!-- Message -->
+                <div class="form-group">
 
-                <input type="tel" placeholder="Phone Number">
+                    <label for="message">
+                        Your Message
+                    </label>
 
+                    <textarea id="message" name="message" placeholder="Tell us what you need..."></textarea>
 
+                    <small class="form-error" id="message-error"></small>
 
-                <input type="text" placeholder="Product You Need">
-
-
-
-                <textarea placeholder="Your Message">
-
-</textarea>
-
+                </div>
 
 
                 <button type="submit">
-
                     Send Message
-
                 </button>
 
-
-
             </form>
-
 
         </div>
 
