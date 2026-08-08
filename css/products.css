@@ -487,67 +487,617 @@
             cursor:pointer;
             
             }
-            /*Responsive layout*/
-            @media(max-width:600px){
+
+ /* =========================================================
+   PRODUCTS PAGE RESPONSIVE DESIGN
+
+========================================================= */
 
 
-                .product-search input{
-                
-                width:90%;
-                
-                }
-                
-                
-                
-                .product-grid{
-                
-                
-                grid-template-columns:
-                
-                1fr;
-                
-                
-                }
-                
-                
-                
-                .product-card{
-                
-                
-                padding:5vw;
-                
-                
-                }
-                
-                
-                
-                .filters{
-                
-                
-                gap:3vw;
-                
-                
-                }
-                
-                
-                
-                .filters button{
-                
-                
-                padding:1.5vh 5vw;
-                
-                
-                }
-                
-                
-                
-                .product-image-container{
-                
-                
-                height:220px;
-                
-                
-                }
-                
-                
-                }
+/* =========================================================
+   SMALL COMPUTERS / LAPTOPS
+   901px - 1366px
+========================================================= */
+
+@media (min-width: 901px) and (max-width: 1366px) {
+
+    .products-hero {
+        min-height: 75vh;
+        padding: 13vh 5vw 7vh;
+        gap: 4vw;
+    }
+
+    .products-hero h1 {
+        font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+        line-height: 1.1;
+    }
+
+    .products-hero p {
+        font-size: 1.25rem;
+        line-height: 1.7;
+        max-width: 650px;
+    }
+
+    .products-section {
+        padding: 5vh 5vw;
+    }
+
+    .products-section h2 {
+        font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .filters {
+        gap: 12px;
+        margin: 3vh 0;
+    }
+
+    .filters button {
+        padding: 12px 24px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .product-card {
+        padding: 18px;
+    }
+
+    .product-image-container {
+        height: 230px;
+    }
+
+    .product-card img {
+        height: 205px;
+    }
+
+    .product-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .product-card p {
+        font-size: 0.95rem;
+    }
+
+    .product-search input {
+        width: 60%;
+    }
+
+    .whatsapp-banner {
+        margin: 7vh 5vw;
+        padding: 45px 30px;
+    }
+}
+
+
+/* =========================================================
+   TABLETS LANDSCAPE
+   768px - 900px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 900px) {
+
+    .products-hero {
+        min-height: auto;
+
+        padding: 120px 5vw 70px;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .products-hero > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products-hero h1 {
+        width: 100%;
+        max-width: 800px;
+
+        font-size: clamp(2.5rem, 6vw, 4rem);
+
+        line-height: 1.1;
+    }
+
+    .products-hero p {
+        width: 100%;
+        max-width: 700px;
+
+        font-size: 17px;
+
+        line-height: 1.7;
+    }
+
+    .products-section {
+        padding: 50px 5vw;
+    }
+
+    .products-section h2 {
+        font-size: clamp(2rem, 4vw, 2.8rem);
+    }
+
+    .product-search {
+        margin: 25px 0;
+    }
+
+    .product-search input {
+        width: 70%;
+        padding: 15px 22px;
+    }
+
+    .filters {
+        gap: 12px;
+        margin: 30px 0;
+    }
+
+    .filters button {
+        padding: 12px 22px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .product-card {
+        padding: 18px;
+    }
+
+    .product-image-container {
+        height: 230px;
+    }
+
+    .product-card img {
+        height: 205px;
+    }
+
+    .whatsapp-banner {
+        margin: 60px 5vw;
+        padding: 45px 30px;
+    }
+}
+
+
+/* =========================================================
+   TABLETS PORTRAIT / LARGE PHONES
+   601px - 767px
+========================================================= */
+
+@media (min-width: 601px) and (max-width: 767px) {
+
+    .products-hero {
+        min-height: auto;
+
+        padding: 115px 6vw 60px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 25px;
+    }
+
+    .products-hero > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products-hero h1 {
+        font-size: clamp(2.4rem, 8vw, 3.5rem);
+
+        line-height: 1.1;
+
+        max-width: 700px;
+    }
+
+    .products-hero p {
+        font-size: 16px;
+
+        line-height: 1.7;
+
+        max-width: 650px;
+    }
+
+    .products-section {
+        padding: 45px 6vw;
+    }
+
+    .products-section h2 {
+        font-size: clamp(2rem, 6vw, 2.8rem);
+    }
+
+    .product-search {
+        margin: 25px 0;
+    }
+
+    .product-search input {
+        width: 85%;
+
+        padding: 15px 20px;
+    }
+
+    .filters {
+        gap: 10px;
+
+        margin: 25px 0;
+    }
+
+    .filters button {
+        padding: 11px 20px;
+
+        font-size: 14px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+    .product-card {
+        padding: 16px;
+
+        border-radius: 25px;
+    }
+
+    .product-image-container {
+        height: 210px;
+
+        border-radius: 20px;
+    }
+
+    .product-card img {
+        height: 190px;
+    }
+
+    .product-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .product-card p {
+        font-size: 0.9rem;
+    }
+
+    .order-btn {
+        width: 100%;
+
+        padding: 12px 15px;
+    }
+
+    .whatsapp-banner {
+        margin: 50px 6vw;
+
+        padding: 40px 25px;
+
+        border-radius: 25px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE DEVICES
+   600px AND BELOW
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -------------------------
+       PRODUCTS HERO
+    ------------------------- */
+
+    .products-hero {
+        min-height: auto;
+
+        padding: 105px 6vw 55px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 20px;
+    }
+
+    .products-hero > div {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .products-hero h1 {
+        width: 100%;
+
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+
+        line-height: 1.1;
+    }
+
+    .products-hero p {
+        width: 100%;
+
+        max-width: 500px;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    /* -------------------------
+       PRODUCTS SECTION
+    ------------------------- */
+
+    .products-section {
+        padding: 40px 6vw;
+    }
+
+    .products-section h2 {
+        font-size: clamp(1.9rem, 8vw, 2.5rem);
+
+        line-height: 1.2;
+    }
+
+
+    /* -------------------------
+       SEARCH
+    ------------------------- */
+
+    .product-search {
+        width: 100%;
+
+        margin: 25px 0;
+    }
+
+    .product-search input {
+        width: 100%;
+
+        padding: 15px 20px;
+
+        font-size: 16px;
+    }
+
+
+    /* -------------------------
+       FILTERS
+    ------------------------- */
+
+    .filters {
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        margin: 25px 0;
+    }
+
+    .filters button {
+        padding: 11px 18px;
+
+        font-size: 14px;
+
+        white-space: nowrap;
+    }
+
+
+    /* -------------------------
+       PRODUCT GRID
+    ------------------------- */
+
+    .product-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    /* -------------------------
+       PRODUCT CARD
+    ------------------------- */
+
+    .product-card {
+        width: 100%;
+
+        padding: 20px;
+
+        border-radius: 25px;
+    }
+
+    .product-image-container {
+        width: 100%;
+
+        height: 230px;
+
+        margin-bottom: 18px;
+
+        border-radius: 20px;
+    }
+
+    .product-card img {
+        height: 210px;
+
+        width: 100%;
+
+        padding: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 1.25rem;
+
+        margin-bottom: 8px;
+    }
+
+    .product-card p {
+        font-size: 0.95rem;
+
+        line-height: 1.6;
+    }
+
+
+    /* -------------------------
+       ORDER BUTTON
+    ------------------------- */
+
+    .order-btn {
+        width: 100%;
+
+        padding: 13px 20px;
+
+        margin-top: 15px;
+    }
+
+
+    /* -------------------------
+       WHATSAPP BANNER
+    ------------------------- */
+
+    .whatsapp-banner {
+        margin: 50px 6vw;
+
+        padding: 40px 20px;
+
+        border-radius: 25px;
+    }
+
+    .whatsapp-banner h2 {
+        font-size: 1.7rem;
+
+        line-height: 1.25;
+    }
+
+    .whatsapp-banner p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .chat-btn {
+        width: 100%;
+
+        max-width: 280px;
+
+        padding: 14px 20px;
+    }
+
+
+    /* -------------------------
+       IMAGE MODAL
+    ------------------------- */
+
+    .image-modal img {
+        max-width: 90%;
+
+        max-height: 75%;
+
+        padding: 12px;
+
+        border-radius: 20px;
+    }
+
+    #close-modal {
+        top: 25px;
+
+        right: 25px;
+
+        font-size: 40px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   390px AND BELOW
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .products-hero {
+        padding: 100px 5vw 45px;
+    }
+
+    .products-hero h1 {
+        font-size: 11vw;
+    }
+
+    .products-hero p {
+        font-size: 15px;
+    }
+
+    .products-section {
+        padding: 35px 5vw;
+    }
+
+    .products-section h2 {
+        font-size: 8vw;
+    }
+
+    .product-search input {
+        padding: 14px 18px;
+    }
+
+    .filters {
+        gap: 8px;
+    }
+
+    .filters button {
+        padding: 10px 15px;
+
+        font-size: 13px;
+    }
+
+    .product-card {
+        padding: 16px;
+    }
+
+    .product-image-container {
+        height: 200px;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .product-card h3 {
+        font-size: 1.15rem;
+    }
+
+    .product-card p {
+        font-size: 0.9rem;
+    }
+
+    .whatsapp-banner {
+        margin: 40px 5vw;
+
+        padding: 35px 18px;
+    }
+
+    .whatsapp-banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .chat-btn {
+        width: 100%;
+    }
+}
