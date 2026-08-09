@@ -43,14 +43,8 @@ const products = [
     },
 
 
-    {
-        name: "Colour Mill Violet",
-        category: "colour-mill",
-        brand: "colourmill",
-        image: "images/products/Colour mill/Violet.jpeg",
-        description: "Premium oil based colouring for cakes and buttercream."
-    },
-
+  
+ 
 
     {
         name: "Colour Mill Baby Blue",
