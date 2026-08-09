@@ -1082,11 +1082,11 @@
     color: var(--primary);
 }
 
-/* Keep icons consistent with the existing footer design */
+/* Keep icons consistent with the existing footer design 
 .footer-contact .contact-item i {
     color: var(--primary);
     flex-shrink: 0;
-}
+} */
 
 /* =========================================================
    RESPONSIVE CONTACT LINKS
