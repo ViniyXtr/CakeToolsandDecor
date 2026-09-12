@@ -3,190 +3,320 @@
    Base / Desktop
 ========================================================= */
 
-.about-hero {
+/* =========================================================
+   ABOUT HERO
+   Base / Desktop
+========================================================= */
 
-    min-height: 85vh;
+/* =========================================================
+   CAKE TOOLS AND DECOR
+   ABOUT PAGE-SPECIFIC STYLES
+   ========================================================= */
 
-    padding: 15vh 6vw 8vh;
 
-    display: grid;
+/* =========================================================
+   ABOUT HERO
+   ========================================================= */
 
-    grid-template-columns: 1fr 1fr;
+   .about-hero {
+    width: 100%;
+    min-height: 82vh;
+    padding: 150px 6vw 100px;
 
+    display: flex;
     align-items: center;
-
-    gap: 5vw;
-
-}
-
-
-.about-content {
-
-    max-width: 750px;
-
-}
-
-
-.about-content h1 {
-
-    font-size: clamp(3rem, 4vw, 5rem);
-
-    line-height: 1.1;
-
-    margin-top: 2vh;
-
-}
-
-
-.about-content p {
-
-    margin-top: 2vh;
-
-    font-size: 1.15rem;
-
-    line-height: 1.8;
-
-    color: #666;
-
-    max-width: 700px;
-
-}
-
-
-.about-button {
-
-    display: inline-flex;
-
-    align-items: center;
-
     justify-content: center;
 
-    margin-top: 3vh;
+    position: relative;
+    overflow: hidden;
 
-    padding: 1.5vh 3vw;
+    text-align: center;
+    background: var(--background);
+}
+
+
+/* Decorative circles */
+
+.about-hero::before {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: -190px;
+    right: -120px;
+
+    border-radius: 50%;
+    background: rgba(255, 179, 71, 0.08);
+
+    pointer-events: none;
+}
+
+.about-hero::after {
+    content: "";
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    bottom: -150px;
+    left: -100px;
+
+    border-radius: 50%;
+    background: rgba(255, 122, 162, 0.06);
+
+    pointer-events: none;
+}
+
+
+/* Hero content */
+
+.about-content {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Hero tag */
+
+.about-content .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 18px;
+
+    border-radius: 50px;
+
+    background: #ffe5ec;
+    color: var(--primary);
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+
+/* Hero heading */
+
+.about-content h1 {
+    max-width: 950px;
+
+    margin: 24px auto 0;
+
+    color: var(--text);
+
+    font-size: clamp(3rem, 5vw, 5rem);
+    line-height: 1.05;
+
+    letter-spacing: -1px;
+}
+
+
+/* Hero paragraph */
+
+.about-content > p {
+    max-width: 760px;
+
+    margin: 25px auto 0;
+
+    color: var(--text-light);
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* Hero buttons */
+
+.about-hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 32px;
+}
+
+
+/* Primary button */
+
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 50px;
+    padding: 13px 25px;
 
     background: var(--primary);
-
     color: white;
 
     border-radius: 50px;
 
-    font-weight: 700;
+    font-weight: 800;
 
-    text-decoration: none;
+    box-shadow:
+        0 10px 25px rgba(255, 122, 162, 0.22);
 
-    transition: .3s;
-
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
 }
-
 
 .about-button:hover {
-
-    background: var(--accent);
-
     transform: translateY(-3px);
 
+    background: var(--primary-dark);
+
+    box-shadow:
+        0 15px 30px rgba(255, 122, 162, 0.28);
 }
 
 
+/* Secondary button */
 
-/* =========================================================
-   ABOUT HERO IMAGE
-   Currently hidden in HTML, but kept for future use
-========================================================= */
-
-.about-image {
-
-    display: flex;
-
+.about-secondary-button {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
 
-    align-items: center;
+    min-height: 50px;
+    padding: 13px 25px;
 
+    background: transparent;
+    color: var(--primary);
+
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
 }
 
+.about-secondary-button:hover {
+    transform: translateY(-3px);
 
-.about-image img {
-
-    width: min(32vw, 520px);
-
-    height: auto;
-
-    animation: float 4s infinite ease-in-out;
-
+    background: #fff0f4;
 }
-
 
 
 /* =========================================================
-   STORY SECTION
-========================================================= */
+   OUR STORY
+   ========================================================= */
 
-.story-section {
+   .story-section {
+    width: 100%;
+    max-width: 1200px;
 
-    padding: 8vh 6vw;
+    margin: 0 auto;
+
+    padding: 100px 6vw;
 
     display: grid;
-
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
     align-items: center;
 
-    gap: 5vw;
-
+    gap: 6vw;
 }
 
+
+/* Story image */
 
 .story-image {
-
+    position: relative;
     width: 100%;
-
 }
 
+.story-image::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    right: -20px;
+    bottom: -20px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 179, 71, 0.12);
+
+    z-index: 0;
+}
 
 .story-image img {
+    position: relative;
+    z-index: 1;
 
     width: 100%;
-
     max-height: 550px;
 
     object-fit: cover;
 
-    border-radius: 30px;
+    border-radius: var(--radius-large);
 
+    box-shadow: var(--shadow);
 }
 
+
+/* Story content */
 
 .story-text {
-
-    max-width: 700px;
-
+    max-width: 650px;
 }
 
+.story-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
 
 .story-text h2 {
+    margin-bottom: 18px;
 
-    font-size: clamp(2.5rem, 3vw, 4rem);
+    color: var(--text);
 
-    color: var(--accent);
-
+    font-size: clamp(2.2rem, 3.5vw, 3.5rem);
     line-height: 1.1;
-
 }
-
 
 .story-text p {
+    margin-bottom: 16px;
 
-    margin-top: 2vh;
+    color: var(--text-light);
 
+    font-size: 16px;
     line-height: 1.8;
-
-    color: #666;
-
-    font-size: 1.05rem;
-
 }
-
 
 
 /* =========================================================
