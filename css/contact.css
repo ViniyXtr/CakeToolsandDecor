@@ -543,13 +543,6 @@
 
 @media (min-width: 901px) and (max-width: 1366px) {
 
-   /* =========================================================
-   SMALL COMPUTERS / LAPTOPS
-   901px - 1366px
-========================================================= */
-
-@media (min-width: 901px) and (max-width: 1366px) {
-
     .contact-hero {
 
         min-height: 78vh;
