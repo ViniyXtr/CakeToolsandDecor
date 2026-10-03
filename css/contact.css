@@ -732,7 +732,26 @@
     }
 
 }
+/* =========================================================
+   CONTACT INFO + FORM
+   TABLETS, MOBILE PHONES & SMALL PHONES
+========================================================= */
 
+@media (max-width: 900px) {
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        width: min(88%, 700px);
+        gap: 30px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        min-width: 0;
+    }
+
+}
 
 /* =========================================================
    TABLET
