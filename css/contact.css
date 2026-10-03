@@ -543,36 +543,49 @@
 
 @media (min-width: 901px) and (max-width: 1366px) {
 
+   /* =========================================================
+   SMALL COMPUTERS / LAPTOPS
+   901px - 1366px
+========================================================= */
+
+@media (min-width: 901px) and (max-width: 1366px) {
+
     .contact-hero {
 
-        min-height: 80vh;
+        min-height: 78vh;
 
-        padding: 120px 5vw 60px;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 4vw;
+        padding: 120px 5vw 70px;
 
     }
+
+
+    .contact-hero-content {
+
+        margin-left: 4vw;
+
+        max-width: 800px;
+
+    }
+
 
     .contact-hero h1 {
 
         font-size: clamp(2.8rem, 4.5vw, 4rem);
 
-        line-height: 1.1;
-
     }
+
 
     .contact-hero p {
 
         font-size: 1.1rem;
 
-        line-height: 1.7;
-
-        max-width: 600px;
+        max-width: 620px;
 
     }
 
+}
+
+  
     .contact-chat-btn {
 
         padding: 14px 30px;
@@ -643,55 +656,68 @@
 
 @media (min-width: 601px) and (max-width: 900px) {
 
-    .contact-hero {
+        .contact-hero {
 
         min-height: auto;
 
         padding: 120px 6vw 70px;
 
-        grid-template-columns: 1fr;
+        justify-content: center;
 
-        gap: 35px;
+    }
+
+
+    .contact-hero-content {
+
+        width: 100%;
+
+        max-width: 750px;
+
+        margin-left: 0;
+
+        align-items: center;
 
         text-align: center;
 
     }
 
-    .contact-hero > div {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-    }
 
     .contact-hero h1 {
 
-        font-size: clamp(2.5rem, 7vw, 4rem);
-
-        line-height: 1.1;
-
         max-width: 750px;
+
+        font-size: clamp(2.5rem, 7vw, 4rem);
 
     }
 
+
     .contact-hero p {
+
+        max-width: 650px;
 
         font-size: 1.1rem;
 
         line-height: 1.7;
 
-        max-width: 650px;
+    }
+
+
+    .contact-hero-actions {
+
+        justify-content: center;
 
     }
+
 
     .contact-chat-btn {
 
-        padding: 14px 30px;
+        min-height: 50px;
+
+        padding: 13px 25px;
 
     }
+
+
 
     .contact-section {
 
@@ -770,11 +796,75 @@
 
 @media (max-width: 600px) {
 
-    .contact-hero {
+   .contact-hero {
 
         min-height: auto;
 
         padding: 110px 6vw 60px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+
+    .contact-hero-content {
+
+        width: 100%;
+
+        max-width: 500px;
+
+        margin-left: 0;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+
+    .contact-hero h1 {
+
+        width: 100%;
+
+        max-width: 500px;
+
+        margin-top: 18px;
+
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+
+        line-height: 1.1;
+
+        text-align: center;
+
+    }
+
+
+    .contact-hero p {
+
+        width: 100%;
+
+        max-width: 500px;
+
+        margin-top: 18px;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+        text-align: center;
+
+    }
+
+
+    .contact-hero-actions {
+
+        width: 100%;
 
         display: flex;
 
@@ -784,58 +874,24 @@
 
         justify-content: center;
 
-        gap: 25px;
+        gap: 12px;
 
-        text-align: center;
-
-    }
-
-    .contact-hero > div {
-
-        width: 100%;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
+        margin-top: 28px;
 
     }
 
-    .contact-hero h1 {
-
-        width: 100%;
-
-        font-size: clamp(2.2rem, 10vw, 3.2rem);
-
-        line-height: 1.1;
-
-        margin-top: 18px;
-
-    }
-
-    .contact-hero p {
-
-        width: 100%;
-
-        max-width: 500px;
-
-        font-size: 16px;
-
-        line-height: 1.7;
-
-    }
 
     .contact-chat-btn {
 
         width: min(100%, 300px);
 
+        min-height: 50px;
+
         padding: 14px 25px;
 
-        margin-top: 20px;
+        font-size: 15px;
 
     }
-
     .contact-section {
 
         padding: 50px 6vw;
@@ -978,11 +1034,12 @@
 
 @media (max-width: 390px) {
 
-    .contact-hero {
+     .contact-hero {
 
         padding: 105px 5vw 50px;
 
     }
+
 
     .contact-hero h1 {
 
@@ -990,11 +1047,15 @@
 
     }
 
+
     .contact-hero p {
 
         font-size: 15px;
 
+        line-height: 1.65;
+
     }
+
 
     .contact-chat-btn {
 
@@ -1002,9 +1063,21 @@
 
         max-width: 280px;
 
+        min-height: 48px;
+
         padding: 13px 20px;
 
+        font-size: 14px;
+
     }
+
+
+    .contact-chat-btn i {
+
+        font-size: 16px;
+
+    }
+
 
     .contact-section {
 
