@@ -2,38 +2,244 @@
    BRANDS PAGE
 ========================================================= */
 
+/* =========================================================
+   BRANDS HERO
+========================================================= */
+
 .brands-hero {
-    min-height: 85vh;
-    padding: 14vh 6vw 7vh;
+    position: relative;
 
-    display: grid;
-    grid-template-columns: 1fr;
+    width: 100%;
+    min-height: 78vh;
+
+    padding: 130px 6vw 90px;
+
+    display: flex;
     align-items: center;
+    justify-content: flex-start;
 
-    max-width: 1400px;
-    margin: 0 auto;
+    text-align: left;
+
+    background:
+        radial-gradient(
+            circle at 10% 25%,
+            rgba(255, 122, 162, 0.12) 0,
+            rgba(255, 122, 162, 0.12) 90px,
+            transparent 91px
+        ),
+        radial-gradient(
+            circle at 90% 75%,
+            rgba(255, 179, 71, 0.14) 0,
+            rgba(255, 179, 71, 0.14) 110px,
+            transparent 111px
+        ),
+        var(--background);
+
+    overflow: hidden;
 }
 
-.brands-hero > div {
+
+/* Decorative circles */
+
+.brands-hero::before,
+.brands-hero::after {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.brands-hero::before {
+    width: 260px;
+    height: 260px;
+
+    top: -110px;
+    left: -90px;
+
+    background: rgba(255, 122, 162, 0.08);
+}
+
+
+.brands-hero::after {
+    width: 320px;
+    height: 320px;
+
+    right: -130px;
+    bottom: -150px;
+
+    background: rgba(255, 179, 71, 0.10);
+}
+
+
+/* Hero content */
+
+.brands-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
     max-width: 850px;
+
+    margin-left: 5vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-align: left;
 }
+
+
+/* Hero heading */
 
 .brands-hero h1 {
-    font-size: clamp(2.8rem, 4.5vw, 4.8rem);
-    line-height: 1.08;
-    margin-top: 2vh;
+    max-width: 850px;
+
+    margin: 22px 0 0;
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    line-height: 1.1;
+
+    color: var(--text);
 }
+
+
+/* Hero paragraph */
 
 .brands-hero p {
-    max-width: 760px;
-    margin-top: 2vh;
+    width: 100%;
+    max-width: 680px;
 
-    font-size: clamp(1rem, 1.2vw, 1.25rem);
+    margin: 24px 0 0;
+
+    font-size: 1.15rem;
+
     line-height: 1.8;
 
-    color: #666;
+    color: var(--text-light);
 }
 
+
+ /* =========================================================
+    BRANDS HERO BUTTONS
+ ========================================================= */
+
+ .brands-hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 32px;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.brands-hero-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 50px;
+
+    padding: 13px 25px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: 50px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 25px rgba(255, 122, 162, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.brands-hero-button:hover {
+
+    transform: translateY(-3px);
+
+    background: var(--primary-dark);
+
+    box-shadow:
+        0 15px 30px rgba(255, 122, 162, 0.28);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.brands-hero-secondary {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 50px;
+
+    padding: 13px 25px;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    border: 2px solid var(--primary);
+
+    border-radius: 50px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.brands-hero-secondary:hover {
+
+    transform: translateY(-3px);
+
+    background: #fff0f4;
+
+    color: var(--primary);
+}
 
 /* =========================================================
    BRANDS SECTION
@@ -430,6 +636,14 @@ and (max-width: 767px) {
     .brand-message > div {
         grid-template-columns: 1fr;
     }
+    .brands-hero-actions {
+        justify-content: flex-start;
+    }
+
+    .brands-hero-button,
+    .brands-hero-secondary {
+        padding: 13px 24px;
+    }
 
 }
 
@@ -451,7 +665,7 @@ and (max-width: 767px) {
 
         text-align: center;
 
-        justify-items: center;
+        justify-content: center;
     }
 
     .brands-hero > div {
@@ -547,6 +761,53 @@ and (max-width: 767px) {
     .brand-message p {
         font-size: 0.95rem;
     }
+   
+
+
+    .brands-hero-content {
+        width: 100%;
+
+        margin-left: 0;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .brands-hero-actions {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 12px;
+
+        margin-top: 28px;
+    }
+
+
+    .brands-hero-button{
+
+        width: min(100%, 300px);
+
+        min-height: 50px;
+
+        padding: 14px 25px;
+    }
+    .brands-hero-secondary {
+        width: min(100%, 260px);
+        min-height: 46px;
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+
 
 }
 
@@ -590,5 +851,22 @@ and (max-width: 767px) {
     .brand-message {
         padding: 35px 18px;
     }
+
+    .brands-hero-button {
+
+        width: 100%;
+
+        max-width: 280px;
+
+        padding: 13px 20px;
+    }
+    .brands-hero-secondary {
+        width: min(100%, 260px);
+        min-height: 46px;
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+    
+
 
 }
